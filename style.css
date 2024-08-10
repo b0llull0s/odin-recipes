@@ -15,22 +15,31 @@ body {
 /* Header styling */
 header {
     display: flex;
-
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically if needed */
     text-align: center;
-    margin-left: 300px;
-    margin-right: 300px;
     margin-top: 20px;
 }
 
-/* Title styling */
 .title {
     font-size: 2.5rem;
-    color: #442121;
-    background: #534223;
-    padding: 20px;
-    border-radius: 50%;
-    box-shadow: 0 40px 80px rgba(201, 119, 13, 0.2);
+    color: #d19692;
+    background: linear-gradient(135deg, #534223, #776644);
+    padding: 20px 40px;
+    border-radius: 50px;
+    box-shadow: 0 10px 20px rgba(201, 119, 13, 0.3);
+    text-shadow: 2px 4px 6px rgba(0, 0, 0, 0.3);
+    transform: perspective(500px) rotateX(10deg);
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: inline-block;
 }
+
+.title:hover {
+    transform: perspective(500px) rotateX(0deg) translateY(-5px);
+    box-shadow: 0 20px 40px rgba(201, 119, 13, 0.5);
+}
+
+
 
 /* Recipe buttons container */
 .recipe-buttons {
